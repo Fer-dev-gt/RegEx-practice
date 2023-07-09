@@ -1,0 +1,61 @@
+\w - caracteres de palabras
+\d - digitos
+\s - espacios/invisibles en blanco
+[0-9] ~ \d
+[0-9a-zA-Z] ~ \w
+* greedy - todo - cero o más
++ uno o más
+? cero o más 
+
+Haciendo que los Match sean lo más pequeños posible (not greedy) usando el (?) como delimitador 
+.+?,
+
+Para que haga Match al final de la línea donde hay un final de linea
+.+?[,\n]{1,1}
+
+Todas las lineas que no empiecen con un digíto
+^[^\d].*$
+
+Patron con clases creadas por nosotros para encontrar diferente formatos de número de teléfono
+Estos 2 patrones capturan los mismos resultados
+\d{2,2}[\-\.\s]?
+(\d{2,2}[\.\-\s\n]?){5,5}
+
+
+Para encontrar el formato de una IP V4
+(\.?\d{1,3}){4,4}
+(\d\.?{1,3}){4,4}
+(\d{1,3}\.){3,3}(\d{1,3})
+
+Para encontrar el formado ideal de número de teléfonos con signos especiales de seperación Menos letras
+(\d{2}[^a-z]?){5}
+
+
+Una contraseña de 8 a 15 caracteres con minimo una minuscula, mayuscula y un digito
+((?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,15}) 
+
+
+Para hacer Match con un LOG en especifico
+^\[LOG.*\[WARN\].*$
+
+
+Haciendo Match con todos los LOG que hicieron un @usuario
+^\[LOG.*\[LOG\].*user:@\w+?\] .*$
+
+
+Para buscar líneas sobre métodos HTTP
+^.*((GET)|(POST)|(PUT)|(DELETE)).*$
+
+
+Para buscar líneas con fechas en el formato día(numero)/mes(nombre)/año(numero):
+^.*(\d{1,2}\/\w+\/\d{4,4}).*$
+
+
+Que les parece la siguiente expresión para obtener los logs que empiecen con una ip y sean solicitudes de tipo POST
+^\d{2,3}\.\d{2,3}\.\d{2,3}\.\d{2,3}.*POST.*$
+
+
+Para numero de telefono de 6 digitos separados por espacios o caracteres especificos menos letras con opcion a extensiones
+^(\+?\d{2,3}[^\da-z]?){2,3}[#pe]?\d+$
+^(\+?\d{2,3}[\W]?){2,3}[#pe]?\d+$
+^\+?(\d+[ \.\-pe#]?)+$
