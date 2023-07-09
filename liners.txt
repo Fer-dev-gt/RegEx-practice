@@ -1,0 +1,126 @@
+1
+12
+123
+1234
+12345
+1234567s8910
+12345678910as
+13453243
+hola tambien
+palabra
+
+
+
+url: https://www.instagram.com/p/BXB4zsUlW5Z/?taken-by=beco.mx
+url: http://instagram.com/p/blablablah
+url: http://itam.mx/test
+http://instagram.com/p/blablablah
+https://www.google.com
+https://cdn-microsoft.org/image/seixo2t9sjl_22.jpg
+https://sub.dominio.de.alguien.com/archivo.html
+https://hola.pizza/archivo.jpg no tiene que aceptar espacios
+http://localhost:3000/getUsers?userId=12354411
+http://localhost:3000/search?city=Barcelona
+
+
+
+csv1,csv2,csv3
+1234,543,234
+432,765,368
+435,631,563,432
+
+
+Rodrigo Jiménez Gutiérrez
+Camilo Sarmiento Gálvez
+Alejandro Pliego Abasto
+Milagros Reyes Japón
+Samuel París Arrabal
+Juan Pablo Tafalla
+Axel Gálvez Velázquez
+Óscar Montreal Aparicio
+Jacobo Pozo Tassis
+Guillermo Ordóñez Espiga
+Eduardo Pousa Curbelo
+Ivanna Bienvenida Kevin
+Ada Tasis López
+Luciana Sáenz García
+Florencia Sainz Márquz
+Catarina Cazalla Lombarda
+Paloma Gallo Perro
+Margarita Quesada Florez
+Vicente Fox Quesada
+Iris Graciani
+Asunción Carballar
+Constanza Muñoz
+Manuel Andres García Márquez
+Camilo Roberto Nuñez
+
+
+
+5556581111
+56-58-11-12-54
+56.58.11.12.54
+56.78-98.23-54
+56 43 54 32 45
+56a34k34x12y23
+56A34D34X12W23
+
+
+
+555658
+56-58-11
+56.58.11
+56.78-98
+65 09 87
+76y87r98
+76y87r98-NO
+45y78-56
+78.87 65
+78 54-56
++521565811
+58-11-11#246
+55-5632-0417
+55256048p123
+55256048e123
+302-345-9876
+
+
+
+esto.es_un.mail@mail.com
+esto.es_un.mail+complejo@mail.com
+uno@dominio.com
+rodrigo.jimenez@yahoo.com.mx
+ruben@starbucks.com
+esto_no$es_email@3dominio.com
+no_se_de_internet3@hotmail.com
+
+
+
+[LOG ENTRY] [ERROR] The system is unstable
+[LOG ENTRY] [WARN] The system may be down
+[LOG ENTRY] [WARN] Microsoft just bought Github
+[LOG DATA] [LOG] Everything is OK
+[LOG ENTRY] [LOG] [user:@beco] Logged in
+[LOG ENTRY] [LOG] [user:@beco] Clicked here
+[LOG DATA] [LOG] [user:@celismx] Did something
+[LOG ENTRY] [LOG] [user:@beco] Rated the app
+[LOG ENTRY] [LOG] [user:@beco] Logged out
+[LOG LINE] [LOG] [user:@celismx] Logged in
+
+
+
+
+-99.205646,19.429707,2275.10
+-99.205581, 19.429652, 2275.10
+-99.204654,19.428952,2275.58
+
+
+-99 12' 34.08"W, 19 34' 56.98"N
+-34 54' 32.00"E, -3 21' 67.00"S
+-354 54' 32.00"E, -3 21' 67.00"S
+-35i4 54' 32.00"E, -3 21' 67.00"S
+
+
+// Coordenadas de aplicación que las convierte en palabras random
+activa.mero.champu
+rode.vendada.rendir
