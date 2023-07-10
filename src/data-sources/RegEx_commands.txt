@@ -108,6 +108,7 @@ Formato simple para nombres en español
 
 Formato que hace Match con nombres de peliculas con su id y categorias
 ^\d+::([\w\s'&!:,\(\)\.\-\/]+)\s\((\d{4,4})\)::.*
+^\d+::(.*)\s\((\d{4})\)::.*$                  
 
 Para reemplazar con los grupos del comando de arriba colocamos en el espacio de replace:
 $1,$2
@@ -119,3 +120,17 @@ insert into movies (year, title) values($2, '$1')
 
 Para hacer un reemplazo y darle formato JSON a los Matches de las peliculas usando "$
 {title: "$1", year:$2},
+
+
+Forma PRO de Agrupar y Transformar manteniendo los géneros de las peliculas del .csv
+^\d+::(.*) \((\d{4})\)::([\w\-]*)\|?([\w\-]*)\|?([\w\-]*)\|?([\w\-]*)\|?([\w\-]*)
+
+Reemplazamos y damos el formato con este comando
+{title: '$1', year: $2, genres: {$3, $4, $5, $6, $7}}
+
+
+Comando para separar los "query parameters" de una URL y hacerles Match
+[\?&](\w+)=([^&\n]+)
+
+Formato para la transformación del Match del "query parameter"
+  \n - $1=$2
