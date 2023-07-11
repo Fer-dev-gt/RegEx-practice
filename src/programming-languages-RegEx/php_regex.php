@@ -12,7 +12,7 @@ while (!feof($file)) {                                              # Iteramos l
   if(preg_match(                                                    # Validamos que nuestra sentencia RegEx hace match, para hacer match de RegEx en PHP utilizamos la función "preg_match"
       '/^2018\-01\-(\d\d),.*$/',                                    # Como primer parámetro de la función "preg_match" va la sentencia RegEx con el formato que quiero que haga match, la agrupación (\d\d) sera el dia que se hizo el partido, al ser una agrupación ese valor se guardará en el index 1 del Array del match
       $line,                                                        # El segundo parametro va a ser la linea con la cual va a buscar si hace match o no
-      $matchArray                                                   # El tercer parametro sera un Array donde iran cada uno de los matches, en este caso va a ver un solo match por Array pero tendremos muchos Arrays
+      $matchArray                                                   # El tercer parametro sera un Array donde iran cada uno de los matches, el indice 0 de este Array es el registro entero y le siguen los otros matches de agrupaciones como (\d\d)
     )
   ) {
     print_r($matchArray);                                           # Imprimimos los Arrays que hicieron match con nuestra sentencia RegEx, en el index 0 del Array se guardará toda la linea del registro que hizo Match
@@ -26,4 +26,10 @@ while (!feof($file)) {                                              # Iteramos l
 fclose($file);                                                      # Cerramos el archivo CSV
 
 printf("\n\nmatches: %d\nno matches: %d\n",                         # Imprimimos con el formato deseado la información de las lineas que hiciero y no hicieron Match
-$matches, $noMatches);                                              # Reemplazamos las variables temporales con los valores correspondientes
+$matches, $noMatches);                                              # Reemplazamos las variables temporales con los valores correspondientesd
+
+
+
+
+# Ejemplo de registro para hacer pruebas de nuestra sentencia RegEx:
+# 2018-01-30,Jamaica,Korea Republic,2,2,Friendly,Antalya,Turkey,TRUE
