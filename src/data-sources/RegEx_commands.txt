@@ -159,3 +159,12 @@ Este formato caputura todos los paises pero puede ser algo peligroso por que ace
 
 Regex para hacer match con la totalidad de los datos
 '/^(\d{4,4}\-\d\d\-\d\d),([\w\-\.\ ñáéíóúçã&]+),([\w\-\.\ ñáéíóúçã&]+),(\d+),(\d+),.*$/i'
+
+
+Sentencia Regex para encontrar los partidos que fueron amistoso 'Friendly'. Usamos Python
+^([\d]{4,4})\-\d\d\-\d\d,(.*),Friendly,.*$
+pattern = re.compile(r'^([\d]{4,4})\-\d\d\-\d\d,(.*),Friendly,.*$')
+
+
+Dandole formato a los matchs de RegEx para que solo muestre el año del partido, hecho en Python
+print ("%s" % res.group(2))
