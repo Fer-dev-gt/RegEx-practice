@@ -120,6 +120,21 @@ no_se_de_internet3@hotmail.com
 -35i4 54' 32.00"E, -3 21' 67.00"S
 
 
+AB1234567890
+CD1234567890
+
+
+\[\d+?\],.*
+[12,34,56,78]
+[12,34,56],78
+[1]2,34,56,78
+[12],34,56,78
+
+
+hola_3@.gmail.com
+prueba@gmail.com
+
+
 // Coordenadas de aplicación que las convierte en palabras random
 activa.mero.champu
 rode.vendada.rendir
