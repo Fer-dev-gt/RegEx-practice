@@ -27,3 +27,8 @@ public class java_regex {                                                       
 
 }
 
+
+
+
+// Ejemplo de registro para hacer pruebas de nuestra sentencia RegEx:
+// 1877-03-05,Wales,Scotland,0,2,Friendly,Wrexham,Wales,FALSE
