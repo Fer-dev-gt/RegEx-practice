@@ -148,3 +148,14 @@ printf("%s (%d) - (%d) %s\n",      $1, $3, $4, $2)
 Le agregamos el año en que se realizo el partido y su expresión de agrupación
 m/^([\d]{4,4})\-.*?,(.*?),(.*?),(\d+),(\d+),.*$/
 printf("%s: %s (%d) - (%d) %s\n",      $1, $2, $4, $5, $3)
+
+
+
+Formato incompleto para hacer match con los paises (no caputura todos)
+'/^(\d{4}\-\d\d\-\d\d),([\w\s\-]+),([\w\s\-]+),(\d+),(\d+),.*$/i', 
+
+Este formato caputura todos los paises pero puede ser algo peligroso por que acepta casi todo
+'/^(\d{4}\-\d\d\-\d\d),(.+),(.+),(\d+),(\d+),.*$/i', 
+
+Regex para hacer match con la totalidad de los datos
+'/^(\d{4,4}\-\d\d\-\d\d),([\w\-\.\ ñáéíóúçã&]+),([\w\-\.\ ñáéíóúçã&]+),(\d+),(\d+),.*$/i'
