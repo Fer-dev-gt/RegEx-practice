@@ -168,3 +168,7 @@ pattern = re.compile(r'^([\d]{4,4})\-\d\d\-\d\d,(.*),Friendly,.*$')
 
 Dandole formato a los matchs de RegEx para que solo muestre el año del partido, hecho en Python
 print ("%s" % res.group(2))
+
+
+Expresión Regex en Java para encontrar todos los partidos que fueron en 2011, tenemos que "doble escapar" los metacaracteres como -, asi: \\-
+Pattern pattern = Pattern.compile("^2011\\-.*$");
