@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS + RegEx</title>
+  <script>
+
+    function validate(str) {                                                    // Esta función rebibe un String del input, verfica que lo que escribimos hace match con nuestro patrón de RegEx, se ejecuta cada vez que levantamos la tecla
+      if(str.match(/^\w{1,10}@[\w\.]{2,}\.\w{2,}$/i)) {                         // Usamos el método 'match(RegEx)' innato de JavaScript para comparar nuestro String (str) con el patron RegEx, la sintaxis cambia un poco al RegEx Vanilla 
+        document.getElementById("boton").disabled = false;                      // Si el corro es correcto habilitamos el boton para subir la información
+        document.getElementById("textInput").style.backgroundColor = 'green';   // Si el email esta bien el input se pone de color verde
+      } else {
+        document.getElementById("textInput").style.backgroundColor = 'red';     // Si el formato no es el correcto entonces se pone de color rojo
+      } 
+      console.log(str);
+    }
+
+  </script>
+</head>
+<body>
+  <input type="text" name="email" id="textInput" onkeyup="validate(this.value)"> <!-- Creamos un input de texto con el evento que ejecuta la función 'validate' y manda como argumento lo que esta escrito en el input para verificar si cumple con nuestra sentencia RegEx -->
+  <input type="button" value="enviar" id="boton" onclick="alert('valid email')" disabled>
+</body>
+</html>
