@@ -110,6 +110,7 @@ Formato que hace Match con nombres de peliculas con su id y categorias
 ^\d+::([\w\s'&!:,\(\)\.\-\/]+)\s\((\d{4,4})\)::.*
 ^\d+::(.*)\s\((\d{4})\)::.*$                  
 
+
 Para reemplazar con los grupos del comando de arriba colocamos en el espacio de replace:
 $1,$2
 
@@ -124,6 +125,7 @@ Para hacer un reemplazo y darle formato JSON a los Matches de las peliculas usan
 
 Forma PRO de Agrupar y Transformar manteniendo los géneros de las peliculas del .csv
 ^\d+::(.*) \((\d{4})\)::([\w\-]*)\|?([\w\-]*)\|?([\w\-]*)\|?([\w\-]*)\|?([\w\-]*)
+
 
 Reemplazamos y damos el a las agrupaciones que hicimos formato con este comando
 {title: '$1', year: $2, genres: {$3, $4, $5, $6, $7}}
@@ -150,12 +152,13 @@ m/^([\d]{4,4})\-.*?,(.*?),(.*?),(\d+),(\d+),.*$/
 printf("%s: %s (%d) - (%d) %s\n",      $1, $2, $4, $5, $3)
 
 
-
 Formato incompleto para hacer match con los paises (no caputura todos)
 '/^(\d{4}\-\d\d\-\d\d),([\w\s\-]+),([\w\s\-]+),(\d+),(\d+),.*$/i', 
 
+
 Este formato caputura todos los paises pero puede ser algo peligroso por que acepta casi todo
 '/^(\d{4}\-\d\d\-\d\d),(.+),(.+),(\d+),(\d+),.*$/i', 
+
 
 Regex para hacer match con la totalidad de los datos
 '/^(\d{4,4}\-\d\d\-\d\d),([\w\-\.\ ñáéíóúçã&]+),([\w\-\.\ ñáéíóúçã&]+),(\d+),(\d+),.*$/i'
@@ -172,3 +175,15 @@ print ("%s" % res.group(2))
 
 Expresión Regex en Java para encontrar todos los partidos que fueron en 2011, tenemos que "doble escapar" los metacaracteres como -, asi: \\-
 Pattern pattern = Pattern.compile("^2011\\-.*$");
+
+
+Ejemplo de como usar sentencias RegEx desde la consola usando el comando 'grep', las opciones de RegEx aqui son muy reducidas
+cat src/data-sources/soccer-matches-data.csv | grep ^2012
+
+
+Alguna expresiones RegEx escritas desde la consola tiene que ser escritas dentro de comillas simples, aparte que la version de RegEx es muy reducida aqui
+cat src/data-sources/soccer-matches-data.csv | grep ',3[0-9],'
+
+
+Usando comandos "grep" anidados con el simbolo Pipe '|' para operar sobre el resultado de otro comando
+cat src/data-sources/soccer-matches-data.csv | grep Brazil | grep Uruguay | grep ^1950
